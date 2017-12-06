@@ -34,4 +34,3 @@ class Deck:
     def print_deck(self):
         for card in self.cards:
             print(card.get_name())
-

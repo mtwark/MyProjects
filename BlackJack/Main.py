@@ -2,6 +2,7 @@ from Player import Player
 from Deck import Deck
 from NN import NN
 import numpy as np
+from matplotlib import pyplot as plt
 
 
 def deal(players, deck):
@@ -62,6 +63,7 @@ def print_all_hands(players):
 
 
 def get_winners(players):
+    dealer_score = 0
     if players[1].upper_score > 21:
         players[1].upper_score = players[1].lower_score
         if players[1].upper_score > 21:
@@ -81,7 +83,9 @@ def get_winners(players):
         elif dealer_score < player.upper_score < 21 :
             print(player.name, "is a winner!")
 
-def play_round(players, deck):
+
+def play_round(players, deck, n1):
+    deck.shuffle(1000)
     deal(players, deck)
     print_all_hands(players)
     print_dealer_hand(players, 1)
@@ -94,7 +98,17 @@ def play_round(players, deck):
             print()
             break
 
+        confidence = 0
+        prediction = n1.guess([players[0].lower_score/10, players[0].upper_score / 10])
+        if prediction >= .5:
+            suggestion = "hit."
+            confidence = str(round(prediction, 2) * 100) + "% confidence."
+        else:
+            suggestion = "stand."
+            confidence = str(100 - round(prediction, 2) * 100) + "% confidence."
+        print("Neural Net suggests you", suggestion,"\n" + confidence)
         choice = input("\nWould you like to hit? (y/n)\n")
+
         if choice == 'n':
             break
         players[0].add_card(deck.get_top())
@@ -108,9 +122,13 @@ def play_round(players, deck):
         print_dealer_hand(players, 0)
 
     get_winners(players)
+    for player in players:
+        deck.add_cards(player.collect_hand())
+
 
 def peek_top_card(deck):
     return deck.cards[-1]
+
 
 def get_training_data(number_of_players, iterations):
     data = []
@@ -146,31 +164,30 @@ def get_training_data(number_of_players, iterations):
 
 
 
-#User will control players[0]
-#Dealer will be players[1]
-# lowerscore, upperscore, dealer visible, tablesum
+# User will control players[0]
+# Dealer will be players[1]
+# lowerscore, upperscore are current inputs for the neural net
 
 deck = Deck(52)
-deck.shuffle(1000)
 players = []
 names = ["Matt", "Dealer", "Beth", "Frank"]
 for name in names:
     players += [Player(name)]
 
 
-data = get_training_data(4, 10000)
-for row in data:
-    print(row)
-    print()
-n = NN(data)
-n.train(1000000)
-guess = n.guess([1.7, 1.7])
 
-print(guess)
-if guess > .5:
-    print("Should hit")
-else:
-    print("Should stand")
 
-#play_round(players, deck)
+# Produce training data matrix with 2 - 23 players at the table and n amount of rows
+data = get_training_data(4, 1000)
+n1 = NN(data)
+n1.train(1000000)
+n1.plot_cost()
+
+# Gameplay
+playing = True
+while playing:
+    play_round(players, deck, n1)
+    choice = input("Would you like to play again? (y/n)\n")
+    if choice != 'y':
+        playing = False
 
