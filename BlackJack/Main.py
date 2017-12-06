@@ -151,7 +151,7 @@ def get_training_data(number_of_players, iterations):
         hit = 0
         if peek_top_card(deck).val + players[0].upper_score <= 21:
             hit = 1
-        elif peek_top_card(deck).val + players[0].lower_score <= 21:
+        elif peek_top_card(deck).val + players[0].lower_score <= 21 and peek_top_card(deck).val + players[0].lower_score >= players[0].upper_score:
             hit = 1
         row += [hit]
         data += [row]
