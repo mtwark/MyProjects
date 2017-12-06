@@ -2,7 +2,6 @@ from Player import Player
 from Deck import Deck
 from NN import NN
 import numpy as np
-from matplotlib import pyplot as plt
 
 
 def deal(players, deck):
@@ -177,7 +176,7 @@ for name in names:
 
 
 
-# Produce training data matrix with 2 - 23 players at the table and n amount of rows
+# Produce training data matrix with 4(at the moment) players at the table and n amount of rows
 data = get_training_data(4, 1000)
 n1 = NN(data)
 n1.train(1000000)

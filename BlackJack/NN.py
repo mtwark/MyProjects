@@ -8,6 +8,10 @@ from matplotlib import pyplot as plt
 
 
 class NN:
+
+    # Learning rate is set low and intended to be used with high iterations to avoid 'jumping'
+    # over minimum value. Range of for loop is set to 2 to accomodate 2 input vals at the moment.
+    # Plan on increasing this in the future. Weights and bias are initialized to normalized rands.
     def __init__(self, data):
         self.learning_rate = 0.0008
         self.data = data
@@ -19,7 +23,7 @@ class NN:
         print("Initializing Network...\nStarting Weights:", self.w,"\nStarting Bias:", self.b)
 
         # These values better show the cost being minimized over time, since random values have a chance at
-        # being correct on the first guess, therefore giving a flat line from the start
+        # being close to correct on the first guess, therefore giving a flat line from the start
         #self.w[0] = 3
         #self.w[1] = -3
         #self.b = -3
