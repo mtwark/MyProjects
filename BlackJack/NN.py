@@ -1,4 +1,4 @@
-#NN.py
+# NN.py
 # Class for a neural network that takes in a set of data that contains an array of inputs, with
 # the expected outputs in the final column for training. The NN is then capable of producing
 # a guess as to how input data should be categorized, given it's training.
@@ -46,7 +46,7 @@ class NN:
     # with respect to each weight and bias, multiplied by a learning rate.
     def train(self, iterations):
         cost_sum = 0
-        print("Training Network...")
+        print("Learning Rate Set To:", self.learning_rate,"\nIterations Set To:", iterations, "\nTraining Network...")
         for i in range(iterations):
             irand = np.random.randint(len(self.data))
             point = self.data[irand]
@@ -74,7 +74,7 @@ class NN:
 
         icost = self.cost_over_time[50]
         fcost = self.cost_over_time[-1]
-        print("Done!\nFinal Weights:", self.w, "\nFinal Bias:", self.b, "\nReduced cost by", str((icost - fcost) * 100 / icost) + "%")
+        print("\nDone!\nFinal Weights:", self.w, "\nFinal Bias:", self.b, "\nReduced cost by", str((icost - fcost) * 100 / icost) + "%")
         print()
 
     # This function uses matplotlib to plot out the average cost over time,
