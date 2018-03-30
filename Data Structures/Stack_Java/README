@@ -1,0 +1,11 @@
+README
+
+Files Included:
+_________________
+1.NQueens.java
+2.Chesspiece.java
+3.Queen.java
+4.Makefile
+
+Notes:
+Actually one of the easier assignments once you get a little bit comfortable using stacks. My code is a little messy, but it works for all of the given inputs.

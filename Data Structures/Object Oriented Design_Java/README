@@ -1,0 +1,35 @@
+Matthew Wark
+mtwark
+README
+
+Files Included:
+_______________
+
+1.ChessBoard.java -main 
+
+King.java
+Queen.java
+Rook.java
+Knight.java
+Bishop.java
+Pawn.java
+Board.java
+LinkedList.java
+Node.java
+
+Notes:
+_______________
+Program should work with all pieces, including pawns. Also wrote a method
+that displays, on an 8x8 board, the possible paths any given piece can take.
+I plan to go back and clean up the pawns updatePaths function eventually.
+I also realize that a lot of the program isn't organized in the best manner
+in terms of readability. Will go back and make small changes for readability
+during the [probably] next chess assignment.
+
+Sources:
+_______________
+http://www.fileformat.info/info/unicode/
+-For unicode codes in my printPaths method.
+
+https://stackoverflow.com/questions/25163713/ternary-operator-java
+-Had forgotten how to use ternary operator.

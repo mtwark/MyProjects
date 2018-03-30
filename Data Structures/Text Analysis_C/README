@@ -1,0 +1,16 @@
+README
+
+Files Included:
+_______________
+1.charType.c
+2.in.txt
+3.in-correct.txt
+4.Makefile
+5.test.txt
+6.test-correct.txt
+
+Notes:
+Turning in a day late because I read the instructions poorly. Was initially trying to store the
+input text line from the file in a dynamically allocated string as well as the other char arrays,
+then I saw that it said we could use 256 char limit for convinience and everything became much
+simpler.

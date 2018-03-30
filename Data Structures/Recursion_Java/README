@@ -1,0 +1,21 @@
+README
+
+FILES INCLUDED:
+_______________
+
+1. NQueens.java
+2. Chesspiece.java
+3. Queen.java
+4. Makefile
+
+Sources:
+
+Reminder on how to use FileWriter:
+https://stackoverflow.com/questions/16933256/how-to-use-a-filewriter-to-write-to-a-file
+
+Comments:
+
+My program isn't the most effecient, and a part of me wants to go back and polish it up,
+but another part of me never wants to touch this program again. The recursive part of the
+program was rough to wrap my head around, but the flow charts shown in class definitely
+helped.

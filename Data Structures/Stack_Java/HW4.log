@@ -1,0 +1,52 @@
+************************************** 
+*******Log from 1rst submission******* 
+************************************** 
+Checker passed. Start with 0.0 points.
+=================================
+Solution has failed on an input. This input is given in your solution folder.
+An example output is also given in your directory.Messages from verifier script follows. This should give some description of why your solution is incorrect.
+====================================
+For input: 6 1 6
+ your output file has no output.
+FAIL
+
+===========================================
+Final score
+0
+
+************************************** 
+*******Log from 2nd submission******** 
+************************************** 
+Checker passed. Start with 0.0 points.
+=================================
+5X5, 6X6, first column tests pass
+Passed HW4-tests/five-six-first-input.txt
+Score is now 3.0
+=============================================
+8X8, first column tests pass
+Passed HW4-tests/eight-first-input.txt
+Score is now 5.0
+=============================================
+6X6, 8X8, single queen tests pass
+Passed HW4-tests/six-eight-single-input.txt
+Score is now 6.0
+=============================================
+10X10, single queen tests pass
+Passed HW4-tests/ten-single-input.txt
+Score is now 7.0
+=============================================
+6X6, 8X8, many queens tests pass
+Passed HW4-tests/six-eight-many-input.txt
+Score is now 8.0
+=============================================
+11X11, many queens tests pass
+Passed HW4-tests/eleven-many-input.txt
+Score is now 10.0
+=============================================
+Solution has passed all tests. The ordeal is over, you can take a breath now.
+Final score, mostly likely half a score
+10
+
+=============================================================== 
+New final score 
+7

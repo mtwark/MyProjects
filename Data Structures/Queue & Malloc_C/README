@@ -1,0 +1,16 @@
+README
+
+Files Included:
+_______________
+1. queue.h
+2. queue.c
+3. queueClient.c
+4. Makefile
+
+Notes:
+Struggled with pretty much everything in this assignment. C sucks. Or more accurately, I suck at C.
+
+Sources:
+http://www.learn-c.org/en/Linked_lists
+http://www.zentut.com/c-tutorial/c-queue/
+https://fresh2refresh.com/c-programming/c-file-handling/sscanf-function-c/

@@ -1,0 +1,18 @@
+README
+
+Files Included:
+_________________
+
+1. Bard.java
+2. Word.java
+3. Makefile
+4. shakespeare.txt
+
+Sources:
+https://beginnersbook.com/2014/07/check-key-value-existence-in-hashtable-example-java/
+https://beginnersbook.com/2014/07/hashtable-in-java-with-example/
+http://www.geeksforgeeks.org/comparator-interface-java/
+https://docs.oracle.com/javase/6/docs/api/java/util/Collection.html
+
+Notes:
+One of the easier assignments acutally. Having all of the test cases reduces the stress of submission by a lot.

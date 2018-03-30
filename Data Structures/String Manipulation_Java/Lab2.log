@@ -1,0 +1,9 @@
+Checker has failed. Below is the log of the checker
+============================================
+File FileReverse.java found
+File Makefile found
+File README not in Lab2 folder. Please make sure it is there.
+FAIL
+=================================================
+Final score:
+0
